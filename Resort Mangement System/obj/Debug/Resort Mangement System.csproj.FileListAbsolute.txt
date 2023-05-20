@@ -1,0 +1,19 @@
+D:\Resort Mangement System\Resort Mangement System\bin\Debug\Resort Mangement System.exe.config
+D:\Resort Mangement System\Resort Mangement System\bin\Debug\Resort Mangement System.exe
+D:\Resort Mangement System\Resort Mangement System\bin\Debug\Resort Mangement System.pdb
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.csproj.AssemblyReference.cache
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.csproj.SuggestedBindingRedirects.cache
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.Properties.Resources.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.csproj.GenerateResource.cache
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.csproj.CoreCompileInputs.cache
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.exe
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort Mangement System.pdb
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.Login.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.DashBoard1.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_AddRoom.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_CustomerDetails.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_Employee.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.DashBoard2.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_CheckIn.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_CheckOut.resources
+D:\Resort Mangement System\Resort Mangement System\obj\Debug\Resort_Mangement_System.UC_RoomDetails.resources
