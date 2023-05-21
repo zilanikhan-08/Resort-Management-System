@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -59,8 +61,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.txtSEarchID = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,7 +101,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox4);
+            this.tabPage2.Controls.Add(this.txtSEarchID);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.dataGridView1);
@@ -104,6 +112,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee Details";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Load);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(642, 281);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 23);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "ID:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label1
             // 
@@ -118,10 +138,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserID,
+            this.EMPName,
+            this.Password,
+            this.Salary,
+            this.JoiningDate,
+            this.Designation});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(3, 414);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1445, 470);
@@ -375,23 +405,73 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
             // 
-            // comboBox4
+            // txtSEarchID
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(645, 309);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(195, 24);
-            this.comboBox4.TabIndex = 3;
+            this.txtSEarchID.Location = new System.Drawing.Point(646, 317);
+            this.txtSEarchID.Name = "txtSEarchID";
+            this.txtSEarchID.Size = new System.Drawing.Size(176, 23);
+            this.txtSEarchID.TabIndex = 3;
+            this.txtSEarchID.TextChanged += new System.EventHandler(this.txtSEarchID_TextChanged);
             // 
-            // label12
+            // contextMenuStrip1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(642, 281);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 23);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "ID:";
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // UserID
+            // 
+            this.UserID.DataPropertyName = "UserID";
+            this.UserID.HeaderText = "User ID";
+            this.UserID.MinimumWidth = 6;
+            this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
+            this.UserID.Width = 125;
+            // 
+            // EMPName
+            // 
+            this.EMPName.DataPropertyName = "Name";
+            this.EMPName.HeaderText = "Name";
+            this.EMPName.MinimumWidth = 6;
+            this.EMPName.Name = "EMPName";
+            this.EMPName.ReadOnly = true;
+            this.EMPName.Width = 125;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.MinimumWidth = 6;
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Width = 125;
+            // 
+            // Salary
+            // 
+            this.Salary.DataPropertyName = "Salary";
+            this.Salary.HeaderText = "Salary";
+            this.Salary.MinimumWidth = 6;
+            this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
+            this.Salary.Width = 125;
+            // 
+            // JoiningDate
+            // 
+            this.JoiningDate.DataPropertyName = "JoiningDate";
+            this.JoiningDate.HeaderText = "Joining Date";
+            this.JoiningDate.MinimumWidth = 6;
+            this.JoiningDate.Name = "JoiningDate";
+            this.JoiningDate.ReadOnly = true;
+            this.JoiningDate.Width = 125;
+            // 
+            // Designation
+            // 
+            this.Designation.DataPropertyName = "Designation";
+            this.Designation.HeaderText = "Designation";
+            this.Designation.MinimumWidth = 6;
+            this.Designation.Name = "Designation";
+            this.Designation.ReadOnly = true;
+            this.Designation.Width = 125;
             // 
             // UC_Employee
             // 
@@ -402,7 +482,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblEmployee);
             this.Name = "UC_Employee";
-            this.Size = new System.Drawing.Size(1524, 1020);
+            this.Size = new System.Drawing.Size(1503, 1020);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -449,8 +529,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.TextBox txtSEarchID;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMPName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JoiningDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
     }
 }

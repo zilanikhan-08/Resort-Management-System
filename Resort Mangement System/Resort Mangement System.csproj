@@ -55,6 +55,7 @@
     <Compile Include="DashBoard2.Designer.cs">
       <DependentUpon>DashBoard2.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
