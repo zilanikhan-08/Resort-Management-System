@@ -39,17 +39,19 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCusID = new System.Windows.Forms.TextBox();
+            this.txtCusName = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPhoneNo = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.ComboBox();
+            this.txtRoomType = new System.Windows.Forms.ComboBox();
+            this.txtRoomNo = new System.Windows.Forms.ComboBox();
+            this.txtPackageType = new System.Windows.Forms.ComboBox();
+            this.dateCheckInDate = new System.Windows.Forms.DateTimePicker();
+            this.btnCheckIn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBed = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(38, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 40);
+            this.label1.Size = new System.Drawing.Size(160, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Check In";
             // 
@@ -66,7 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 694);
+            this.label2.Location = new System.Drawing.Point(211, 697);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 1;
@@ -76,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1016, 552);
+            this.label3.Location = new System.Drawing.Point(1009, 697);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 2;
@@ -106,7 +108,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(211, 552);
+            this.label7.Location = new System.Drawing.Point(211, 528);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 23);
             this.label7.TabIndex = 6;
@@ -116,7 +118,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1016, 383);
+            this.label8.Location = new System.Drawing.Point(1009, 528);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 23);
             this.label8.TabIndex = 7;
@@ -126,7 +128,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1016, 235);
+            this.label10.Location = new System.Drawing.Point(1009, 383);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 23);
             this.label10.TabIndex = 9;
@@ -146,7 +148,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(591, 552);
+            this.label14.Location = new System.Drawing.Point(591, 528);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(152, 23);
             this.label14.TabIndex = 13;
@@ -162,108 +164,169 @@
             this.label16.TabIndex = 15;
             this.label16.Text = "Phone Number";
             // 
-            // textBox1
+            // txtCusID
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 22);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtCusID.BackColor = System.Drawing.Color.LightGray;
+            this.txtCusID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusID.Location = new System.Drawing.Point(215, 264);
+            this.txtCusID.Name = "txtCusID";
+            this.txtCusID.Size = new System.Drawing.Size(168, 27);
+            this.txtCusID.TabIndex = 16;
             // 
-            // textBox2
+            // txtCusName
             // 
-            this.textBox2.Location = new System.Drawing.Point(212, 409);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 22);
-            this.textBox2.TabIndex = 17;
+            this.txtCusName.BackColor = System.Drawing.Color.LightGray;
+            this.txtCusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusName.Location = new System.Drawing.Point(212, 409);
+            this.txtCusName.Name = "txtCusName";
+            this.txtCusName.Size = new System.Drawing.Size(171, 27);
+            this.txtCusName.TabIndex = 17;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 720);
+            this.textBox3.BackColor = System.Drawing.Color.LightGray;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(215, 723);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 22);
+            this.textBox3.Size = new System.Drawing.Size(168, 27);
             this.textBox3.TabIndex = 18;
             // 
-            // textBox4
+            // txtPhoneNo
             // 
-            this.textBox4.Location = new System.Drawing.Point(595, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 22);
-            this.textBox4.TabIndex = 19;
+            this.txtPhoneNo.BackColor = System.Drawing.Color.LightGray;
+            this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNo.Location = new System.Drawing.Point(595, 264);
+            this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.Size = new System.Drawing.Size(168, 27);
+            this.txtPhoneNo.TabIndex = 19;
             // 
-            // textBox5
+            // txtAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(595, 409);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(168, 22);
-            this.textBox5.TabIndex = 20;
+            this.txtAddress.BackColor = System.Drawing.Color.LightGray;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(595, 409);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(168, 27);
+            this.txtAddress.TabIndex = 20;
             // 
-            // comboBox1
+            // txtGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(215, 579);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 24);
-            this.comboBox1.TabIndex = 21;
+            this.txtGender.BackColor = System.Drawing.Color.LightGray;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.txtGender.Location = new System.Drawing.Point(215, 555);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(137, 28);
+            this.txtGender.TabIndex = 21;
             // 
-            // comboBox3
+            // txtRoomType
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1020, 264);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 23;
+            this.txtRoomType.BackColor = System.Drawing.Color.LightGray;
+            this.txtRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomType.FormattingEnabled = true;
+            this.txtRoomType.Items.AddRange(new object[] {
+            "AC",
+            "Non-AC"});
+            this.txtRoomType.Location = new System.Drawing.Point(1013, 409);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.Size = new System.Drawing.Size(121, 28);
+            this.txtRoomType.TabIndex = 23;
+            this.txtRoomType.SelectedIndexChanged += new System.EventHandler(this.txtRoomType_SelectedIndexChanged);
             // 
-            // comboBox4
+            // txtRoomNo
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1020, 409);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 24;
+            this.txtRoomNo.BackColor = System.Drawing.Color.LightGray;
+            this.txtRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomNo.FormattingEnabled = true;
+            this.txtRoomNo.Location = new System.Drawing.Point(1013, 554);
+            this.txtRoomNo.Name = "txtRoomNo";
+            this.txtRoomNo.Size = new System.Drawing.Size(121, 28);
+            this.txtRoomNo.TabIndex = 24;
             // 
-            // comboBox5
+            // txtPackageType
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(1020, 579);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(168, 24);
-            this.comboBox5.TabIndex = 25;
+            this.txtPackageType.BackColor = System.Drawing.Color.LightGray;
+            this.txtPackageType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPackageType.FormattingEnabled = true;
+            this.txtPackageType.Items.AddRange(new object[] {
+            "Regular",
+            "Couple",
+            "VIP",
+            "HoneyMoon",
+            "Wedding",
+            "Hoilday"});
+            this.txtPackageType.Location = new System.Drawing.Point(1013, 724);
+            this.txtPackageType.Name = "txtPackageType";
+            this.txtPackageType.Size = new System.Drawing.Size(168, 28);
+            this.txtPackageType.TabIndex = 25;
             // 
-            // dateTimePicker1
+            // dateCheckInDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(595, 580);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateCheckInDate.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateCheckInDate.Location = new System.Drawing.Point(595, 556);
+            this.dateCheckInDate.Name = "dateCheckInDate";
+            this.dateCheckInDate.Size = new System.Drawing.Size(200, 23);
+            this.dateCheckInDate.TabIndex = 26;
             // 
-            // button1
+            // btnCheckIn
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1177, 626);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 46);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Check In";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCheckIn.BackColor = System.Drawing.Color.Gold;
+            this.btnCheckIn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIn.Location = new System.Drawing.Point(1170, 771);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(148, 46);
+            this.btnCheckIn.TabIndex = 27;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.UseVisualStyleBackColor = false;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1009, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 23);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Bed";
+            // 
+            // txtBed
+            // 
+            this.txtBed.BackColor = System.Drawing.Color.LightGray;
+            this.txtBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBed.FormattingEnabled = true;
+            this.txtBed.Items.AddRange(new object[] {
+            "KingSize",
+            "Double",
+            "Triple",
+            "Single"});
+            this.txtBed.Location = new System.Drawing.Point(1013, 262);
+            this.txtBed.Name = "txtBed";
+            this.txtBed.Size = new System.Drawing.Size(121, 28);
+            this.txtBed.TabIndex = 29;
             // 
             // UC_CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtBed);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnCheckIn);
+            this.Controls.Add(this.dateCheckInDate);
+            this.Controls.Add(this.txtPackageType);
+            this.Controls.Add(this.txtRoomNo);
+            this.Controls.Add(this.txtRoomType);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtPhoneNo);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCusName);
+            this.Controls.Add(this.txtCusID);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
@@ -295,16 +358,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCusID;
+        private System.Windows.Forms.TextBox txtCusName;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPhoneNo;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.ComboBox txtGender;
+        private System.Windows.Forms.ComboBox txtRoomType;
+        private System.Windows.Forms.ComboBox txtRoomNo;
+        private System.Windows.Forms.ComboBox txtPackageType;
+        private System.Windows.Forms.DateTimePicker dateCheckInDate;
+        private System.Windows.Forms.Button btnCheckIn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox txtBed;
     }
 }

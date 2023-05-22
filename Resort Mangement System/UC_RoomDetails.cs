@@ -20,7 +20,7 @@ namespace Resort_Mangement_System
             this.Da = new DataAccess();
             this.PopulateGridView();
         }
-        private void PopulateGridView(string sql = "select * from Customer_Table;")
+        private void PopulateGridView(string sql = "select * from Rooms;")
         {
             var ds = this.Da.ExecuteQuery(sql);
 
@@ -29,8 +29,13 @@ namespace Resort_Mangement_System
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "select * from Room_Table where RoomNo like '%" + this.textBox1.Text + "%';";
+            string query = "select * from Rooms where RoomNo like '%" + this.textBox1.Text + "%';";
             this.PopulateGridView(query);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

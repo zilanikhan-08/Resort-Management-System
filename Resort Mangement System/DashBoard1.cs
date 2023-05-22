@@ -24,6 +24,9 @@ namespace Resort_Mangement_System
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
+            movingpanel1.Visible = true;
+            movingpanel2.Visible = false;
+            movingpanel3.Visible = false;
             this.panel6.Controls.Clear();
             this.panel6.Controls.Add(ar);
         }
@@ -35,6 +38,9 @@ namespace Resort_Mangement_System
 
         private void btnCustomerDetails_Click(object sender, EventArgs e)
         {
+            movingpanel1.Visible = false;
+            movingpanel2.Visible = true; 
+            movingpanel3.Visible = false;
             this.panel6.Controls.Clear();
             UC_CustomerDetails customerDetails = new UC_CustomerDetails();
             this.panel6.Controls.Add((customerDetails));
@@ -42,6 +48,9 @@ namespace Resort_Mangement_System
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            movingpanel1.Visible = false;
+            movingpanel2.Visible = false;
+            movingpanel3.Visible = true;
             this.panel6.Controls.Clear();
             UC_Employee employeeDetails = new UC_Employee();
             this.panel6.Controls.Add((employeeDetails));

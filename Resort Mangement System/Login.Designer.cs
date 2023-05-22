@@ -38,9 +38,9 @@ namespace Resort_Mangement_System
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@ namespace Resort_Mangement_System
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(265, 34);
             this.txtUserID.TabIndex = 0;
+            this.txtUserID.Text = "AD-875-1";
             this.txtUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
@@ -67,6 +68,7 @@ namespace Resort_Mangement_System
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(265, 34);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "AD#24";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnLogin
@@ -129,15 +131,14 @@ namespace Resort_Mangement_System
             this.panel1.Size = new System.Drawing.Size(333, 278);
             this.panel1.TabIndex = 7;
             // 
-            // btnExit
+            // label2
             // 
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(287, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(46, 39);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 22);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Password:";
             // 
             // label1
             // 
@@ -148,14 +149,15 @@ namespace Resort_Mangement_System
             this.label1.TabIndex = 8;
             this.label1.Text = "User ID:";
             // 
-            // label2
+            // btnExit
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 22);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Password:";
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(287, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(46, 39);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // Login
             // 

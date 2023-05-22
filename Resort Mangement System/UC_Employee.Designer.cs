@@ -32,25 +32,27 @@
             this.lblEmployee = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtSEarchID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnHire = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDesignation = new System.Windows.Forms.ComboBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserID = new System.Windows.Forms.TextBox();
+            this.txtEName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,14 +63,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.txtSEarchID = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Designation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label13 = new System.Windows.Forms.Label();
+            this.eUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ePassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eJoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,10 +95,10 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 105);
+            this.tabControl1.Location = new System.Drawing.Point(3, 177);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1459, 916);
+            this.tabControl1.Size = new System.Drawing.Size(1530, 844);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage2
@@ -108,22 +110,31 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1451, 887);
+            this.tabPage2.Size = new System.Drawing.Size(1522, 815);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee Details";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Load);
             // 
+            // txtSEarchID
+            // 
+            this.txtSEarchID.BackColor = System.Drawing.Color.LightGray;
+            this.txtSEarchID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSEarchID.Location = new System.Drawing.Point(128, 166);
+            this.txtSEarchID.Name = "txtSEarchID";
+            this.txtSEarchID.Size = new System.Drawing.Size(176, 28);
+            this.txtSEarchID.TabIndex = 3;
+            this.txtSEarchID.TextChanged += new System.EventHandler(this.txtSEarchID_TextChanged);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(642, 281);
+            this.label12.Location = new System.Drawing.Point(124, 129);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 23);
+            this.label12.Size = new System.Drawing.Size(115, 23);
             this.label12.TabIndex = 2;
-            this.label12.Text = "ID:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.label12.Text = "Sear by ID:";
             // 
             // label1
             // 
@@ -134,7 +145,6 @@
             this.label1.Size = new System.Drawing.Size(257, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Employee Details:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -148,276 +158,13 @@
             this.Salary,
             this.JoiningDate,
             this.Designation});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 414);
+            this.dataGridView1.Location = new System.Drawing.Point(427, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1445, 470);
+            this.dataGridView1.Size = new System.Drawing.Size(1054, 507);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.btnHire);
-            this.tabPage3.Controls.Add(this.dateTimePicker2);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
-            this.tabPage3.Controls.Add(this.comboBox3);
-            this.tabPage3.Controls.Add(this.comboBox2);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1451, 887);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Hire Employee";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // btnHire
-            // 
-            this.btnHire.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHire.Location = new System.Drawing.Point(1211, 569);
-            this.btnHire.Name = "btnHire";
-            this.btnHire.Size = new System.Drawing.Size(147, 47);
-            this.btnHire.TabIndex = 26;
-            this.btnHire.Text = "HIRE";
-            this.btnHire.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(151, 569);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 25;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(690, 379);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 24;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(690, 292);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 20;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(151, 466);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(690, 467);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 17;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(690, 193);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(151, 381);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(145, 292);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(151, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 13;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(686, 352);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 23);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Joining Date";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(147, 543);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 23);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Date Of Birth";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(686, 265);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 23);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Designation";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(686, 166);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 23);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Salary";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(686, 439);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 23);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Address";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(147, 439);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 23);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Gender";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(147, 352);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 23);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(147, 265);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "User ID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(147, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Name";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1451, 887);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "Terminate Employee";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(783, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 49);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Terminate";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 423);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1445, 461);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(565, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(562, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ID:";
-            // 
-            // txtSEarchID
-            // 
-            this.txtSEarchID.Location = new System.Drawing.Point(646, 317);
-            this.txtSEarchID.Name = "txtSEarchID";
-            this.txtSEarchID.Size = new System.Drawing.Size(176, 23);
-            this.txtSEarchID.TabIndex = 3;
-            this.txtSEarchID.TextChanged += new System.EventHandler(this.txtSEarchID_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // UserID
             // 
@@ -473,6 +220,304 @@
             this.Designation.ReadOnly = true;
             this.Designation.Width = 125;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btnHire);
+            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.txtDesignation);
+            this.tabPage3.Controls.Add(this.txtSalary);
+            this.tabPage3.Controls.Add(this.txtPassword);
+            this.tabPage3.Controls.Add(this.txtUserID);
+            this.tabPage3.Controls.Add(this.txtEName);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1522, 815);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Hire Employee";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnHire
+            // 
+            this.btnHire.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnHire.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHire.Location = new System.Drawing.Point(1211, 569);
+            this.btnHire.Name = "btnHire";
+            this.btnHire.Size = new System.Drawing.Size(147, 47);
+            this.btnHire.TabIndex = 26;
+            this.btnHire.Text = "HIRE";
+            this.btnHire.UseVisualStyleBackColor = false;
+            this.btnHire.Click += new System.EventHandler(this.btnHire_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(690, 379);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(305, 28);
+            this.dateTimePicker1.TabIndex = 24;
+            // 
+            // txtDesignation
+            // 
+            this.txtDesignation.BackColor = System.Drawing.Color.LightGray;
+            this.txtDesignation.FormattingEnabled = true;
+            this.txtDesignation.Items.AddRange(new object[] {
+            "Receptionist"});
+            this.txtDesignation.Location = new System.Drawing.Point(690, 292);
+            this.txtDesignation.Name = "txtDesignation";
+            this.txtDesignation.Size = new System.Drawing.Size(189, 29);
+            this.txtDesignation.TabIndex = 20;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.BackColor = System.Drawing.Color.LightGray;
+            this.txtSalary.Location = new System.Drawing.Point(690, 193);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(189, 28);
+            this.txtSalary.TabIndex = 16;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.LightGray;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(151, 381);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(189, 28);
+            this.txtPassword.TabIndex = 15;
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.BackColor = System.Drawing.Color.LightGray;
+            this.txtUserID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserID.Location = new System.Drawing.Point(145, 292);
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Size = new System.Drawing.Size(195, 28);
+            this.txtUserID.TabIndex = 14;
+            // 
+            // txtEName
+            // 
+            this.txtEName.BackColor = System.Drawing.Color.LightGray;
+            this.txtEName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEName.Location = new System.Drawing.Point(151, 193);
+            this.txtEName.Name = "txtEName";
+            this.txtEName.Size = new System.Drawing.Size(189, 28);
+            this.txtEName.TabIndex = 13;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(686, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 23);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Joining Date";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(686, 265);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 23);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Designation";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(686, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 23);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Salary";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(73, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(267, 40);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "New Employee";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(147, 352);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 23);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(147, 265);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 23);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "User ID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(147, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Name";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1522, 815);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Terminate Employee";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Load);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Tomato;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(227, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 49);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Terminate";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eUserID,
+            this.eName,
+            this.ePassword,
+            this.eSalary,
+            this.eJoiningDate,
+            this.eDesignation});
+            this.dataGridView2.Location = new System.Drawing.Point(425, 155);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1054, 507);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.LightGray;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(32, 145);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(195, 29);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Search by ID:";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(206, 40);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Termination";
+            // 
+            // eUserID
+            // 
+            this.eUserID.DataPropertyName = "UserID";
+            this.eUserID.HeaderText = "User ID";
+            this.eUserID.MinimumWidth = 6;
+            this.eUserID.Name = "eUserID";
+            this.eUserID.ReadOnly = true;
+            this.eUserID.Width = 125;
+            // 
+            // eName
+            // 
+            this.eName.DataPropertyName = "Name";
+            this.eName.HeaderText = "Name";
+            this.eName.MinimumWidth = 6;
+            this.eName.Name = "eName";
+            this.eName.ReadOnly = true;
+            this.eName.Width = 125;
+            // 
+            // ePassword
+            // 
+            this.ePassword.DataPropertyName = "Password";
+            this.ePassword.HeaderText = "Password";
+            this.ePassword.MinimumWidth = 6;
+            this.ePassword.Name = "ePassword";
+            this.ePassword.ReadOnly = true;
+            this.ePassword.Width = 125;
+            // 
+            // eSalary
+            // 
+            this.eSalary.DataPropertyName = "Salary";
+            this.eSalary.HeaderText = "Salary";
+            this.eSalary.MinimumWidth = 6;
+            this.eSalary.Name = "eSalary";
+            this.eSalary.ReadOnly = true;
+            this.eSalary.Width = 125;
+            // 
+            // eJoiningDate
+            // 
+            this.eJoiningDate.DataPropertyName = "JoiningDate";
+            this.eJoiningDate.HeaderText = "Joining Date";
+            this.eJoiningDate.MinimumWidth = 6;
+            this.eJoiningDate.Name = "eJoiningDate";
+            this.eJoiningDate.ReadOnly = true;
+            this.eJoiningDate.Width = 125;
+            // 
+            // eDesignation
+            // 
+            this.eDesignation.DataPropertyName = "Designation";
+            this.eDesignation.HeaderText = "Designation";
+            this.eDesignation.MinimumWidth = 6;
+            this.eDesignation.Name = "eDesignation";
+            this.eDesignation.ReadOnly = true;
+            this.eDesignation.Width = 125;
+            // 
             // UC_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,7 +527,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblEmployee);
             this.Name = "UC_Employee";
-            this.Size = new System.Drawing.Size(1503, 1020);
+            this.Size = new System.Drawing.Size(1524, 999);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -511,20 +556,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnHire;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox txtDesignation;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserID;
+        private System.Windows.Forms.TextBox txtEName;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -539,5 +579,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn JoiningDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Designation;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eUserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ePassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eSalary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eJoiningDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eDesignation;
     }
 }

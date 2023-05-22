@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFALoginDBD;
 
 namespace Resort_Mangement_System
 {
     public partial class UC_AddRoom : UserControl
     {
+        private DataAccess Da { get; set; }
         Function func = new Function();
         String query;
         public UC_AddRoom()
@@ -23,11 +25,8 @@ namespace Resort_Mangement_System
 
         private void btn_AddRoom_Click(object sender, EventArgs e)
         {
-            try 
-            {
-                query = @"Update Room_Table @          
-                         Set BookStatus = 'NO'@
-                         where BookStatus = null ";
+            try
+            { 
                 if (txtRoomNo.Text !="" && txtRoomType.Text !="" && txtBed.Text !="" && txtPackageType.Text !="" && txtRent.Text!="")
                 {
                     String roomNo = txtRoomNo.Text;
@@ -35,8 +34,9 @@ namespace Resort_Mangement_System
                     String bed = txtBed.Text;
                     String packageType = txtPackageType.Text;
                     String rent = txtRent.Text;
+                    String bookStatus = "Available";
 
-                    query = "insert into Room_Table(roomNo, roomType, bed, packageType, price) values('"+roomNo+"', '"+roomType+"', '"+bed+"', '"+packageType+"', "+rent+")";
+                    query = "insert into Rooms(RoomNo, RoomType, Bed, PackageType, Price, BookStatus) values('"+roomNo+"', '"+roomType+"', '"+bed+"', '"+packageType+"', "+rent+", '"+ bookStatus +"')";
                     func.setData(query, "Room Added.");
                     UC_AddRoom_Load(this, null);
                 }
@@ -62,7 +62,7 @@ namespace Resort_Mangement_System
 
         private void UC_AddRoom_Load(object sender, EventArgs e)
         {
-            query = "select * from Room_Table";
+            query = "select * from Rooms";
             DataSet ds = func.getData(query);
             dataGridView1.DataSource = ds.Tables[0]; 
         }
@@ -76,5 +76,14 @@ namespace Resort_Mangement_System
         {
             UC_AddRoom_Load(this, null);
         }
+       // private void AutoGenerateRoomNo()
+       // {
+            //query = "select RoomNo from Rooms order by RoomNo desc;";
+            //var dt = this.Da.ExecuteQueryTable(query);
+            //var lastRoomNo = dt.Rows[0][0].ToString();
+            //int temp = Convert.ToInt32(s[1]);
+            //var newRoomNo = (++temp).ToString();
+            //this.txtRoomNo.Text = newRoomNo;
+       // }
     }
 }

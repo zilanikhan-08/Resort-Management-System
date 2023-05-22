@@ -31,27 +31,32 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRoomDetails = new System.Windows.Forms.Button();
-            this.movingPanel = new System.Windows.Forms.Panel();
+            this.movingPanel1 = new System.Windows.Forms.Panel();
             this.btnCustomerDetails = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnCheckIn = new System.Windows.Forms.Button();
+            this.movingpanel2 = new System.Windows.Forms.Panel();
+            this.movingpanel3 = new System.Windows.Forms.Panel();
+            this.movingpanel4 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Location = new System.Drawing.Point(206, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1422, 673);
+            this.panel6.Size = new System.Drawing.Size(1740, 1000);
             this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.movingpanel4);
+            this.panel5.Controls.Add(this.movingpanel3);
+            this.panel5.Controls.Add(this.movingpanel2);
             this.panel5.Controls.Add(this.btnRoomDetails);
-            this.panel5.Controls.Add(this.movingPanel);
+            this.panel5.Controls.Add(this.movingPanel1);
             this.panel5.Controls.Add(this.btnCustomerDetails);
             this.panel5.Controls.Add(this.btnCheckOut);
             this.panel5.Controls.Add(this.btnCheckIn);
@@ -65,7 +70,7 @@
             // 
             this.btnRoomDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnRoomDetails.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoomDetails.Location = new System.Drawing.Point(1, 329);
+            this.btnRoomDetails.Location = new System.Drawing.Point(3, 329);
             this.btnRoomDetails.Name = "btnRoomDetails";
             this.btnRoomDetails.Size = new System.Drawing.Size(197, 39);
             this.btnRoomDetails.TabIndex = 3;
@@ -73,13 +78,13 @@
             this.btnRoomDetails.UseVisualStyleBackColor = false;
             this.btnRoomDetails.Click += new System.EventHandler(this.btnRoomDetails_Click);
             // 
-            // movingPanel
+            // movingPanel1
             // 
-            this.movingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.movingPanel.Location = new System.Drawing.Point(5, 201);
-            this.movingPanel.Name = "movingPanel";
-            this.movingPanel.Size = new System.Drawing.Size(195, 10);
-            this.movingPanel.TabIndex = 1;
+            this.movingPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingPanel1.Location = new System.Drawing.Point(5, 201);
+            this.movingPanel1.Name = "movingPanel1";
+            this.movingPanel1.Size = new System.Drawing.Size(195, 10);
+            this.movingPanel1.TabIndex = 1;
             // 
             // btnCustomerDetails
             // 
@@ -109,6 +114,7 @@
             // 
             this.btnCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnCheckIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCheckIn.Location = new System.Drawing.Point(3, 160);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Size = new System.Drawing.Size(197, 39);
@@ -116,6 +122,33 @@
             this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseVisualStyleBackColor = false;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
+            // 
+            // movingpanel2
+            // 
+            this.movingpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel2.Location = new System.Drawing.Point(3, 258);
+            this.movingpanel2.Name = "movingpanel2";
+            this.movingpanel2.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel2.TabIndex = 2;
+            this.movingpanel2.Visible = false;
+            // 
+            // movingpanel3
+            // 
+            this.movingpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel3.Location = new System.Drawing.Point(1, 313);
+            this.movingpanel3.Name = "movingpanel3";
+            this.movingpanel3.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel3.TabIndex = 2;
+            this.movingpanel3.Visible = false;
+            // 
+            // movingpanel4
+            // 
+            this.movingpanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel4.Location = new System.Drawing.Point(1, 370);
+            this.movingpanel4.Name = "movingpanel4";
+            this.movingpanel4.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel4.TabIndex = 2;
+            this.movingpanel4.Visible = false;
             // 
             // DashBoard2
             // 
@@ -139,9 +172,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnRoomDetails;
-        private System.Windows.Forms.Panel movingPanel;
+        private System.Windows.Forms.Panel movingPanel1;
         private System.Windows.Forms.Button btnCustomerDetails;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnCheckIn;
+        private System.Windows.Forms.Panel movingpanel4;
+        private System.Windows.Forms.Panel movingpanel3;
+        private System.Windows.Forms.Panel movingpanel2;
     }
 }

@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.movingPanel = new System.Windows.Forms.Panel();
+            this.movingpanel1 = new System.Windows.Forms.Panel();
             this.btnCustomerDetails = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.movingpanel2 = new System.Windows.Forms.Panel();
+            this.movingpanel3 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.movingPanel);
+            this.panel5.Controls.Add(this.movingpanel3);
+            this.panel5.Controls.Add(this.movingpanel2);
+            this.panel5.Controls.Add(this.movingpanel1);
             this.panel5.Controls.Add(this.btnCustomerDetails);
             this.panel5.Controls.Add(this.btnEmployee);
             this.panel5.Controls.Add(this.btnAddRoom);
@@ -51,13 +55,13 @@
             this.panel5.Size = new System.Drawing.Size(200, 673);
             this.panel5.TabIndex = 0;
             // 
-            // movingPanel
+            // movingpanel1
             // 
-            this.movingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.movingPanel.Location = new System.Drawing.Point(5, 201);
-            this.movingPanel.Name = "movingPanel";
-            this.movingPanel.Size = new System.Drawing.Size(195, 10);
-            this.movingPanel.TabIndex = 1;
+            this.movingpanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel1.Location = new System.Drawing.Point(5, 201);
+            this.movingpanel1.Name = "movingpanel1";
+            this.movingpanel1.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel1.TabIndex = 1;
             // 
             // btnCustomerDetails
             // 
@@ -103,6 +107,24 @@
             this.panel6.Size = new System.Drawing.Size(1222, 673);
             this.panel6.TabIndex = 1;
             // 
+            // movingpanel2
+            // 
+            this.movingpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel2.Location = new System.Drawing.Point(10, 258);
+            this.movingpanel2.Name = "movingpanel2";
+            this.movingpanel2.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel2.TabIndex = 2;
+            this.movingpanel2.Visible = false;
+            // 
+            // movingpanel3
+            // 
+            this.movingpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel3.Location = new System.Drawing.Point(1, 319);
+            this.movingpanel3.Name = "movingpanel3";
+            this.movingpanel3.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel3.TabIndex = 4;
+            this.movingpanel3.Visible = false;
+            // 
             // DashBoard1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -133,10 +155,12 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel movingPanel;
+        private System.Windows.Forms.Panel movingpanel1;
         private System.Windows.Forms.Button btnCustomerDetails;
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel movingpanel3;
+        private System.Windows.Forms.Panel movingpanel2;
     }
 }

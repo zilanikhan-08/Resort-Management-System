@@ -90,9 +90,9 @@
             this.lblRent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRent.Location = new System.Drawing.Point(1207, 180);
             this.lblRent.Name = "lblRent";
-            this.lblRent.Size = new System.Drawing.Size(54, 23);
+            this.lblRent.Size = new System.Drawing.Size(57, 23);
             this.lblRent.TabIndex = 4;
-            this.lblRent.Text = "Rent";
+            this.lblRent.Text = "Price";
             // 
             // dataGridView1
             // 
@@ -106,50 +106,60 @@
             // 
             // txtRoomNo
             // 
+            this.txtRoomNo.BackColor = System.Drawing.Color.LightGray;
+            this.txtRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomNo.Location = new System.Drawing.Point(932, 109);
             this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(157, 22);
+            this.txtRoomNo.Size = new System.Drawing.Size(157, 27);
             this.txtRoomNo.TabIndex = 6;
             // 
             // txtRent
             // 
+            this.txtRent.BackColor = System.Drawing.Color.LightGray;
+            this.txtRent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRent.Location = new System.Drawing.Point(1211, 206);
             this.txtRent.Name = "txtRent";
-            this.txtRent.Size = new System.Drawing.Size(157, 22);
+            this.txtRent.Size = new System.Drawing.Size(157, 27);
             this.txtRent.TabIndex = 7;
             // 
             // txtRoomType
             // 
+            this.txtRoomType.BackColor = System.Drawing.Color.LightGray;
+            this.txtRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomType.FormattingEnabled = true;
             this.txtRoomType.Items.AddRange(new object[] {
             "AC",
             "Non-AC"});
             this.txtRoomType.Location = new System.Drawing.Point(932, 206);
             this.txtRoomType.Name = "txtRoomType";
-            this.txtRoomType.Size = new System.Drawing.Size(157, 24);
+            this.txtRoomType.Size = new System.Drawing.Size(157, 28);
             this.txtRoomType.TabIndex = 8;
             // 
             // txtBed
             // 
+            this.txtBed.BackColor = System.Drawing.Color.LightGray;
+            this.txtBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBed.FormattingEnabled = true;
             this.txtBed.Items.AddRange(new object[] {
             "KingSize",
             "Double",
-            "Triple"});
+            "Triple",
+            "Single"});
             this.txtBed.Location = new System.Drawing.Point(932, 311);
             this.txtBed.Name = "txtBed";
-            this.txtBed.Size = new System.Drawing.Size(157, 24);
+            this.txtBed.Size = new System.Drawing.Size(157, 28);
             this.txtBed.TabIndex = 10;
             // 
             // btn_AddRoom
             // 
+            this.btn_AddRoom.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_AddRoom.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddRoom.Location = new System.Drawing.Point(1046, 448);
+            this.btn_AddRoom.Location = new System.Drawing.Point(1211, 449);
             this.btn_AddRoom.Name = "btn_AddRoom";
-            this.btn_AddRoom.Size = new System.Drawing.Size(146, 33);
+            this.btn_AddRoom.Size = new System.Drawing.Size(157, 45);
             this.btn_AddRoom.TabIndex = 11;
             this.btn_AddRoom.Text = "ADD";
-            this.btn_AddRoom.UseVisualStyleBackColor = true;
+            this.btn_AddRoom.UseVisualStyleBackColor = false;
             this.btn_AddRoom.Click += new System.EventHandler(this.btn_AddRoom_Click);
             // 
             // label1
@@ -164,6 +174,8 @@
             // 
             // txtPackageType
             // 
+            this.txtPackageType.BackColor = System.Drawing.Color.LightGray;
+            this.txtPackageType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPackageType.FormattingEnabled = true;
             this.txtPackageType.Items.AddRange(new object[] {
             "Regular",
@@ -174,7 +186,7 @@
             "Hoilday"});
             this.txtPackageType.Location = new System.Drawing.Point(1211, 109);
             this.txtPackageType.Name = "txtPackageType";
-            this.txtPackageType.Size = new System.Drawing.Size(157, 24);
+            this.txtPackageType.Size = new System.Drawing.Size(157, 28);
             this.txtPackageType.TabIndex = 13;
             // 
             // UC_AddRoom
