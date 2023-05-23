@@ -73,9 +73,15 @@ namespace Resort_Mangement_System
 
                
         }
-        private void btnExit_Click_1(object sender, EventArgs e)
+        public void clearAll()
         {
-            Application.Exit();
+            txtPassword.Clear();
+            txtUserID.Clear();
+        }
+
+        private void Login_Enter(object sender, EventArgs e)
+        {
+            clearAll();
         }
     }
 }

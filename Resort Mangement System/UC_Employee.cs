@@ -66,10 +66,10 @@ namespace Resort_Mangement_System
                     String password = txtPassword.Text;
                     String salary = txtSalary.Text;
                     String designation = txtDesignation.Text;
-                    //DateTime joiningDate = dateTimePicker1.;
+                    DateTime joiningDate = DateTime.Today;
 
-                    query = "insert into EMP(UserID, Password, Name, Designation, Salary, JoiningDate) values('" + userID + "', '" + password + "', '" + eName + "', '" + designation + "', '" + salary + "')";
-                    func.setData(query, "Room Added.");
+                    query = "insert into EMP(UserID, Password, Name, Designation, Salary, JoiningDate) values('" + userID + "', '" + password + "', '" + eName + "', '" + designation + "', '" + salary + "', '"+ joiningDate +"')";
+                    func.setData(query, "Emplyoee Hired");
                     
                 }
                 else
@@ -87,13 +87,36 @@ namespace Resort_Mangement_System
         {
             query = "select * from EMP";
             DataSet ds = func.getData(query);
-            dataGridView2.DataSource = ds.Tables[1];
+            this.PopulateGridView(query);
         }
 
-        private void comboBox1_TextChanged(object sender, EventArgs e)
+        private void txtEID_TextChanged(object sender, EventArgs e)
         {
-            string query = "select * from EMP where UserID like '%" + this.comboBox1.Text + "%';";
+            string query = "select * from EMP where UserID like '%" + this.txtEID.Text + "%';";
             this.PopulateGridView(query);
+        }
+
+        private void btnTerminate_Click(object sender, EventArgs e)
+        {
+            if(txtEID.Text != "")
+            {
+                if(MessageBox.Show("Are you Sure?", "Confirmation...!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)==DialogResult.Yes)
+                {
+                    query = "delete from EMP where UserID = '" + txtEID.Text + "'";
+                    func.setData(query, "Terminated.");
+                    tabEmployee_SelectedIndexChanged(query, null);
+                }
+            }
+        }
+
+        private void tabEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabEmployee.SelectedIndex == 1)
+            {
+                query = "select * from EMP";
+                DataSet ds = func.getData(query);
+                dataGridView2.DataSource = ds.Tables[0];
+            }                
         }
     }
 }

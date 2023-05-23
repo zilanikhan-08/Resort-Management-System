@@ -76,14 +76,6 @@ namespace Resort_Mangement_System
         {
             UC_AddRoom_Load(this, null);
         }
-       // private void AutoGenerateRoomNo()
-       // {
-            //query = "select RoomNo from Rooms order by RoomNo desc;";
-            //var dt = this.Da.ExecuteQueryTable(query);
-            //var lastRoomNo = dt.Rows[0][0].ToString();
-            //int temp = Convert.ToInt32(s[1]);
-            //var newRoomNo = (++temp).ToString();
-            //this.txtRoomNo.Text = newRoomNo;
-       // }
+      
     }
 }

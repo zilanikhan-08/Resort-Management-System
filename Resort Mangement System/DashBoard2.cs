@@ -69,6 +69,11 @@ namespace Resort_Mangement_System
             this.panel6.Controls.Add((customerDetails));
         }
 
-        
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            this.Hide();
+            log.Show();
+        }
     }
 }

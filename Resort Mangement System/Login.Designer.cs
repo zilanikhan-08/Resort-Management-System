@@ -40,7 +40,6 @@ namespace Resort_Mangement_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +53,6 @@ namespace Resort_Mangement_System
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(265, 34);
             this.txtUserID.TabIndex = 0;
-            this.txtUserID.Text = "AD-875-1";
             this.txtUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
@@ -68,12 +66,11 @@ namespace Resort_Mangement_System
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(265, 34);
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "AD#24";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Lime;
+            this.btnLogin.BackColor = System.Drawing.Color.Orange;
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -93,12 +90,12 @@ namespace Resort_Mangement_System
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Monotype Corsiva", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(475, 2);
+            this.lblTitle.Location = new System.Drawing.Point(335, -7);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(863, 97);
+            this.lblTitle.Size = new System.Drawing.Size(1376, 97);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "Dream Heaven Park & Resort";
+            this.lblTitle.Text = "Dream Heaven Park , Picnic Spot And Resort";
             // 
             // lblError
             // 
@@ -119,7 +116,6 @@ namespace Resort_Mangement_System
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.txtUserID);
             this.panel1.Controls.Add(this.lblError);
             this.panel1.Controls.Add(this.txtPassword);
@@ -149,16 +145,6 @@ namespace Resort_Mangement_System
             this.label1.TabIndex = 8;
             this.label1.Text = "User ID:";
             // 
-            // btnExit
-            // 
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(287, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(46, 39);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -170,12 +156,12 @@ namespace Resort_Mangement_System
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Enter += new System.EventHandler(this.Login_Enter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -196,7 +182,6 @@ namespace Resort_Mangement_System
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnExit;
         private Label label2;
         private Label label1;
     }

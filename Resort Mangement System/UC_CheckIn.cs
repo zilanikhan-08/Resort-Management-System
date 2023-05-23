@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,27 +22,36 @@ namespace Resort_Mangement_System
         public UC_CheckIn()
         {
             InitializeComponent();
-            this.AutoGenerateCusID();
+            this.Da = new DataAccess();
+           this.PopulateGridView();
+
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtCusID.Text != "" && txtCusName.Text != "" && txtGender.Text!= "" && txtPackageType.Text != "" && txtPhoneNo.Text != "" && txtRoomNo.Text != "" && txtRoomType.Text != "" && txtAddress.Text != "" && dateCheckInDate.Text != "")
+                if (txtCusID.Text != "" && txtCusName.Text != "" && txtGender.Text!= "" && txtPackageType.Text != "" && txtPhoneNo.Text != "" && txtRoomType.Text != "" && txtAddress.Text != "" && dateCheckInDate.Text != "" && txtBed.Text != "")
                 {
                     String cusID = txtCusID.Text;
                     String cusName = txtCusName.Text;
                     String gender = txtGender.Text;
                     String phoneNo = txtPhoneNo.Text;
                     String address = txtAddress.Text;
-                    String roomNo = txtRoomNo.Text;
-                    String roomType = txtRoomType.Text;
-                    String packageType = txtPackageType.Text;
+                    DateTime checkInDate = DateTime.Today;
+                    var roomNo = this.dataGridView1.CurrentRow.Cells["RoomNo"].Value.ToString();
 
-                    query = "insert into Customer_Table(CustomerID, Name, PhoneNumber, Address, Nationality, Gender, CheckInDate, RoomNo, RoomType, PackageType) values('"+ cusID +"', '"+ cusName +"','"+ gender +"', '"+ phoneNo +"', '"+ address +"', '" + roomNo + "', '" + roomType + "', '" + packageType +" )";
+
+                    query = "insert into Customer_Table(CustomerID, CusName, PhoneNo, Address, Gender, CheckIn, RoomNo) values('"+ cusID +"', '"+ cusName +"', '"+ phoneNo +"', '"+ address +"','"+ gender +"', '"+ checkInDate +"', '"+ roomNo +"' )";
                     func.setData(query, "Check In Done.");
-                    
+                    String sql = @" update Rooms
+                                set BookStatus = 'Not Available',
+                                PackageType = '"+ this.txtPackageType.Text +@"',
+                                RoomType = '"+ this.txtRoomType.Text +@"',
+                                Bed = '"+ this.txtBed.Text +@"'
+                                where RoomNo = '" + roomNo + "'; ";
+                    func.setData(sql,"");
+                    this.PopulateGridView();
                 }
                 else
                 {
@@ -53,34 +63,8 @@ namespace Resort_Mangement_System
                 MessageBox.Show("" + ex);
             }
         }
-        public void setComboBox(String query, ComboBox cb) 
-        {
-            SqlDataReader sdr = func.getForCombo(query);
-            while (sdr.Read()) 
-            {
-                for (int i = 0; i < sdr.FieldCount; i++)
-                {
-                    cb.Items.Add(sdr.GetString(i));
-                }             
-            }
-            sdr.Close();
-        }
 
-        private void txtRoomType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            query = "selece RoomNo from Rooms where Bed = '" + txtBed.Text + "' and RoomType = '"+ txtRoomType.Text +"' and PackageType = '"+ txtPackageType.Text +"' and BookStatus = 'Available'";
-            setComboBox(query, txtRoomNo);
-        }
-        private void AutoGenerateCusID()
-        {
-            query = "select CustomerID from Customer_Table order by CustomerID desc;";
-           var dt = this.Da.ExecuteQueryTable(query);
-           var lastCusiD = dt.Rows[0][0].ToString();
-            string[] s = lastCusiD.Split('-');
-            int temp = Convert.ToInt32(s[1]);
-            var newCusID = "C-" + (++temp).ToString("d3");
-            this.txtCusID.Text = newCusID;
-        }
+        
         public void clearAll()
         {
             txtCusID.Clear();
@@ -88,12 +72,22 @@ namespace Resort_Mangement_System
             txtAddress.Clear();
             txtPhoneNo.Clear();
             txtGender.SelectedIndex = -1;
-            txtRoomNo.SelectedIndex = -1;
             txtRoomType.SelectedIndex = -1;
             txtBed.SelectedIndex = -1;
             txtPackageType.SelectedIndex = -1;
             
         }
+        private void PopulateGridView(string sql = "select RoomNo from Rooms where BookStatus = 'Available';")
+        {
+            var ds = this.Da.ExecuteQuery(sql);
 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void UC_CheckIn_Leave(object sender, EventArgs e)
+        {
+            clearAll();
+        }
     }
 }

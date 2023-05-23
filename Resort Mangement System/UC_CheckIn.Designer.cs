@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,17 +40,18 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtCusID = new System.Windows.Forms.TextBox();
             this.txtCusName = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.ComboBox();
             this.txtRoomType = new System.Windows.Forms.ComboBox();
-            this.txtRoomNo = new System.Windows.Forms.ComboBox();
             this.txtPackageType = new System.Windows.Forms.ComboBox();
             this.dateCheckInDate = new System.Windows.Forms.DateTimePicker();
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBed = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RoomNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,21 +64,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Check In";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 697);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nationality";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1009, 697);
+            this.label3.Location = new System.Drawing.Point(211, 657);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 2;
@@ -182,15 +172,6 @@
             this.txtCusName.Size = new System.Drawing.Size(171, 27);
             this.txtCusName.TabIndex = 17;
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.LightGray;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(215, 723);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 27);
-            this.textBox3.TabIndex = 18;
-            // 
             // txtPhoneNo
             // 
             this.txtPhoneNo.BackColor = System.Drawing.Color.LightGray;
@@ -235,17 +216,6 @@
             this.txtRoomType.Name = "txtRoomType";
             this.txtRoomType.Size = new System.Drawing.Size(121, 28);
             this.txtRoomType.TabIndex = 23;
-            this.txtRoomType.SelectedIndexChanged += new System.EventHandler(this.txtRoomType_SelectedIndexChanged);
-            // 
-            // txtRoomNo
-            // 
-            this.txtRoomNo.BackColor = System.Drawing.Color.LightGray;
-            this.txtRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNo.FormattingEnabled = true;
-            this.txtRoomNo.Location = new System.Drawing.Point(1013, 554);
-            this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(121, 28);
-            this.txtRoomNo.TabIndex = 24;
             // 
             // txtPackageType
             // 
@@ -259,7 +229,7 @@
             "HoneyMoon",
             "Wedding",
             "Hoilday"});
-            this.txtPackageType.Location = new System.Drawing.Point(1013, 724);
+            this.txtPackageType.Location = new System.Drawing.Point(212, 696);
             this.txtPackageType.Name = "txtPackageType";
             this.txtPackageType.Size = new System.Drawing.Size(168, 28);
             this.txtPackageType.TabIndex = 25;
@@ -309,22 +279,46 @@
             this.txtBed.Size = new System.Drawing.Size(121, 28);
             this.txtBed.TabIndex = 29;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RoomNo});
+            this.dataGridView1.Location = new System.Drawing.Point(1013, 555);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(181, 146);
+            this.dataGridView1.TabIndex = 30;
+            // 
+            // RoomNo
+            // 
+            this.RoomNo.DataPropertyName = "RoomNo";
+            this.RoomNo.HeaderText = "Room No.";
+            this.RoomNo.MinimumWidth = 6;
+            this.RoomNo.Name = "RoomNo";
+            this.RoomNo.ReadOnly = true;
+            this.RoomNo.Width = 125;
+            // 
             // UC_CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtBed);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.dateCheckInDate);
             this.Controls.Add(this.txtPackageType);
-            this.Controls.Add(this.txtRoomNo);
             this.Controls.Add(this.txtRoomType);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtPhoneNo);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtCusName);
             this.Controls.Add(this.txtCusID);
             this.Controls.Add(this.label16);
@@ -336,10 +330,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UC_CheckIn";
             this.Size = new System.Drawing.Size(1545, 1020);
+            this.Leave += new System.EventHandler(this.UC_CheckIn_Leave);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,7 +343,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -360,16 +354,16 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtCusID;
         private System.Windows.Forms.TextBox txtCusName;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtPhoneNo;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.ComboBox txtGender;
         private System.Windows.Forms.ComboBox txtRoomType;
-        private System.Windows.Forms.ComboBox txtRoomNo;
         private System.Windows.Forms.ComboBox txtPackageType;
         private System.Windows.Forms.DateTimePicker dateCheckInDate;
         private System.Windows.Forms.Button btnCheckIn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox txtBed;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNo;
     }
 }

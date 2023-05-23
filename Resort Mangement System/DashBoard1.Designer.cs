@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.movingpanel3 = new System.Windows.Forms.Panel();
+            this.movingpanel2 = new System.Windows.Forms.Panel();
             this.movingpanel1 = new System.Windows.Forms.Panel();
             this.btnCustomerDetails = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.movingpanel2 = new System.Windows.Forms.Panel();
-            this.movingpanel3 = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +46,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.btnLogOut);
             this.panel5.Controls.Add(this.movingpanel3);
             this.panel5.Controls.Add(this.movingpanel2);
             this.panel5.Controls.Add(this.movingpanel1);
@@ -54,6 +58,37 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 673);
             this.panel5.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Location = new System.Drawing.Point(1, 539);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(197, 39);
+            this.btnLogOut.TabIndex = 5;
+            this.btnLogOut.Text = "<-] Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // movingpanel3
+            // 
+            this.movingpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel3.Location = new System.Drawing.Point(1, 319);
+            this.movingpanel3.Name = "movingpanel3";
+            this.movingpanel3.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel3.TabIndex = 4;
+            this.movingpanel3.Visible = false;
+            // 
+            // movingpanel2
+            // 
+            this.movingpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.movingpanel2.Location = new System.Drawing.Point(10, 258);
+            this.movingpanel2.Name = "movingpanel2";
+            this.movingpanel2.Size = new System.Drawing.Size(195, 10);
+            this.movingpanel2.TabIndex = 2;
+            this.movingpanel2.Visible = false;
             // 
             // movingpanel1
             // 
@@ -79,7 +114,7 @@
             // 
             this.btnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.Location = new System.Drawing.Point(1, 274);
+            this.btnEmployee.Location = new System.Drawing.Point(3, 274);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(197, 39);
             this.btnEmployee.TabIndex = 3;
@@ -107,32 +142,15 @@
             this.panel6.Size = new System.Drawing.Size(1222, 673);
             this.panel6.TabIndex = 1;
             // 
-            // movingpanel2
-            // 
-            this.movingpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.movingpanel2.Location = new System.Drawing.Point(10, 258);
-            this.movingpanel2.Name = "movingpanel2";
-            this.movingpanel2.Size = new System.Drawing.Size(195, 10);
-            this.movingpanel2.TabIndex = 2;
-            this.movingpanel2.Visible = false;
-            // 
-            // movingpanel3
-            // 
-            this.movingpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.movingpanel3.Location = new System.Drawing.Point(1, 319);
-            this.movingpanel3.Name = "movingpanel3";
-            this.movingpanel3.Size = new System.Drawing.Size(195, 10);
-            this.movingpanel3.TabIndex = 4;
-            this.movingpanel3.Visible = false;
-            // 
             // DashBoard1
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1422, 673);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "DashBoard1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Manager Panel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashBoard1_FormClosing);
             this.panel5.ResumeLayout(false);
@@ -162,5 +180,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel movingpanel3;
         private System.Windows.Forms.Panel movingpanel2;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

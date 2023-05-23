@@ -55,5 +55,12 @@ namespace Resort_Mangement_System
             UC_Employee employeeDetails = new UC_Employee();
             this.panel6.Controls.Add((employeeDetails));
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            this.Hide();
+            log.Show();
+        }
     } 
 }

@@ -48,7 +48,7 @@
             // 
             this.lblAddRoom.AutoSize = true;
             this.lblAddRoom.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddRoom.Location = new System.Drawing.Point(10, 25);
+            this.lblAddRoom.Location = new System.Drawing.Point(81, 52);
             this.lblAddRoom.Name = "lblAddRoom";
             this.lblAddRoom.Size = new System.Drawing.Size(189, 40);
             this.lblAddRoom.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.lblRoomNo.AutoSize = true;
             this.lblRoomNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomNo.Location = new System.Drawing.Point(928, 83);
+            this.lblRoomNo.Location = new System.Drawing.Point(285, 183);
             this.lblRoomNo.Name = "lblRoomNo";
             this.lblRoomNo.Size = new System.Drawing.Size(106, 23);
             this.lblRoomNo.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.lblRoomType.AutoSize = true;
             this.lblRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomType.Location = new System.Drawing.Point(928, 180);
+            this.lblRoomType.Location = new System.Drawing.Point(285, 280);
             this.lblRoomType.Name = "lblRoomType";
             this.lblRoomType.Size = new System.Drawing.Size(119, 23);
             this.lblRoomType.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.lblBed.AutoSize = true;
             this.lblBed.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBed.Location = new System.Drawing.Point(928, 285);
+            this.lblBed.Location = new System.Drawing.Point(849, 183);
             this.lblBed.Name = "lblBed";
             this.lblBed.Size = new System.Drawing.Size(48, 23);
             this.lblBed.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.lblRent.AutoSize = true;
             this.lblRent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRent.Location = new System.Drawing.Point(1207, 180);
+            this.lblRent.Location = new System.Drawing.Point(564, 280);
             this.lblRent.Name = "lblRent";
             this.lblRent.Size = new System.Drawing.Size(57, 23);
             this.lblRent.TabIndex = 4;
@@ -97,7 +97,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(289, 415);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -108,7 +108,7 @@
             // 
             this.txtRoomNo.BackColor = System.Drawing.Color.LightGray;
             this.txtRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNo.Location = new System.Drawing.Point(932, 109);
+            this.txtRoomNo.Location = new System.Drawing.Point(289, 209);
             this.txtRoomNo.Name = "txtRoomNo";
             this.txtRoomNo.Size = new System.Drawing.Size(157, 27);
             this.txtRoomNo.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             this.txtRent.BackColor = System.Drawing.Color.LightGray;
             this.txtRent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRent.Location = new System.Drawing.Point(1211, 206);
+            this.txtRent.Location = new System.Drawing.Point(568, 306);
             this.txtRent.Name = "txtRent";
             this.txtRent.Size = new System.Drawing.Size(157, 27);
             this.txtRent.TabIndex = 7;
@@ -130,7 +130,7 @@
             this.txtRoomType.Items.AddRange(new object[] {
             "AC",
             "Non-AC"});
-            this.txtRoomType.Location = new System.Drawing.Point(932, 206);
+            this.txtRoomType.Location = new System.Drawing.Point(289, 306);
             this.txtRoomType.Name = "txtRoomType";
             this.txtRoomType.Size = new System.Drawing.Size(157, 28);
             this.txtRoomType.TabIndex = 8;
@@ -145,7 +145,7 @@
             "Double",
             "Triple",
             "Single"});
-            this.txtBed.Location = new System.Drawing.Point(932, 311);
+            this.txtBed.Location = new System.Drawing.Point(853, 209);
             this.txtBed.Name = "txtBed";
             this.txtBed.Size = new System.Drawing.Size(157, 28);
             this.txtBed.TabIndex = 10;
@@ -154,7 +154,7 @@
             // 
             this.btn_AddRoom.BackColor = System.Drawing.Color.Chartreuse;
             this.btn_AddRoom.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddRoom.Location = new System.Drawing.Point(1211, 449);
+            this.btn_AddRoom.Location = new System.Drawing.Point(1005, 306);
             this.btn_AddRoom.Name = "btn_AddRoom";
             this.btn_AddRoom.Size = new System.Drawing.Size(157, 45);
             this.btn_AddRoom.TabIndex = 11;
@@ -166,7 +166,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1207, 83);
+            this.label1.Location = new System.Drawing.Point(564, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 23);
             this.label1.TabIndex = 12;
@@ -184,7 +184,7 @@
             "HoneyMoon",
             "Wedding",
             "Hoilday"});
-            this.txtPackageType.Location = new System.Drawing.Point(1211, 109);
+            this.txtPackageType.Location = new System.Drawing.Point(568, 209);
             this.txtPackageType.Name = "txtPackageType";
             this.txtPackageType.Size = new System.Drawing.Size(157, 28);
             this.txtPackageType.TabIndex = 13;
